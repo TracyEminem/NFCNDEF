@@ -20,14 +20,12 @@
             <intent-filter>
                 <action android:name="android.nfc.action.NDEF_DISCOVERED" />
                 <category android:name="android.intent.category.DEFAULT" />
-                <!-- 这里要匹配之前写入卡里的数据 -->
                 <data
                     android:host="ext"
                     android:pathPrefix="/vndcn.com:nfc"
                     android:scheme="vnd.android.nfc" />
             </intent-filter>
         </activity>
-        <!--                android:pathPrefix="/com.bxy.nfc:nfc"-->
         <activity
             android:name=".NfcWriteActivity"
             android:launchMode="singleInstance">
